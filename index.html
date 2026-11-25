@@ -4,13 +4,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viko_Lashes — Мастер по ресницам</title>
+<title>Viko_Lashes | Lash Studio</title>
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -22,21 +26,21 @@ body {
 
 header {
     background: #fffdf9;
-    padding: 20px;
+    padding: 22px 15px;
     text-align: center;
     border-bottom: 1px solid #eadfd7;
 }
 
 .logo {
-    font-size: 30px;
-    color: #b77c83;
     font-family: Georgia, serif;
+    font-size: 32px;
+    color: #b77c83;
 }
 
 header p {
     color: #88766e;
-    font-size: 13px;
-    letter-spacing: 2px;
+    font-size: 11px;
+    letter-spacing: 3px;
 }
 
 nav {
@@ -46,17 +50,18 @@ nav {
 nav a {
     color: #594943;
     text-decoration: none;
-    margin: 0 9px;
-    font-size: 14px;
+    margin: 5px 9px;
+    font-size: 13px;
+    display: inline-block;
 }
 
 nav a:hover {
-    color: #c17f89;
+    color: #bd858a;
 }
 
 .hero {
     text-align: center;
-    padding: 75px 20px;
+    padding: 85px 20px;
     background: #eee5dc;
 }
 
@@ -76,7 +81,7 @@ nav a:hover {
 .button {
     display: inline-block;
     margin-top: 25px;
-    padding: 13px 28px;
+    padding: 13px 30px;
     background: #c58c91;
     color: white;
     text-decoration: none;
@@ -99,7 +104,7 @@ h2 {
     font-family: Georgia, serif;
     color: #815e58;
     font-size: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .about {
@@ -113,25 +118,62 @@ h2 {
 }
 
 .service-list {
-    max-width: 550px;
+    max-width: 600px;
     margin: auto;
 }
 
 .service {
     background: #fffdf9;
-    padding: 18px;
+    padding: 17px;
     margin: 12px 0;
     border-radius: 12px;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    align-items: center;
+    gap: 12px;
     text-align: left;
+}
+
+.service span:first-child {
+    flex: 1;
 }
 
 .service span:last-child {
     color: #b77c83;
     font-weight: bold;
     white-space: nowrap;
+}
+
+.promotions {
+    background: #faf7f2;
+}
+
+.review {
+    background: #fffdf9;
+    padding: 22px;
+    border-radius: 13px;
+    max-width: 600px;
+    margin: 14px auto;
+    color: #76665e;
+    border: 1px solid #eee3dc;
+}
+
+.review h3 {
+    color: #815e58;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.review strong {
+    display: block;
+    font-size: 25px;
+    color: #b77c83;
+    margin-top: 10px;
+}
+
+.decoration {
+    color: #bd858a;
 }
 
 .gallery-grid {
@@ -150,17 +192,14 @@ h2 {
     background: #eee5dc;
 }
 
-.reviews {
-    background: #f0e8df;
+.gallery-note {
+    color: #88766e;
+    font-size: 13px;
+    margin-top: 15px;
 }
 
-.review {
-    background: #fffdf9;
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 500px;
-    margin: 12px auto;
-    color: #76665e;
+.reviews {
+    background: #f0e8df;
 }
 
 .booking {
@@ -172,13 +211,14 @@ h2 {
 .booking select,
 .booking textarea {
     width: 100%;
-    padding: 13px;
+    padding: 14px;
     margin: 8px 0;
     border: 1px solid #dfcec5;
     border-radius: 9px;
     background: #fffdf9;
     font-size: 15px;
     color: #493b36;
+    font-family: Arial, sans-serif;
 }
 
 .booking button {
@@ -189,21 +229,33 @@ h2 {
     background: #eee5dc;
 }
 
+.contacts p {
+    margin: 12px 0;
+}
+
 .contacts a {
     color: #a76e76;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-button {
+    display: inline-block;
+    background: #fffdf9;
+    color: #a76e76;
+    padding: 12px 22px;
+    margin: 8px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: 1px solid #dfcec5;
 }
 
 footer {
     background: #594943;
     color: #fffaf5;
     text-align: center;
-    padding: 22px;
+    padding: 23px;
     font-size: 13px;
-}
-
-.decoration {
-    color: #bd858a;
 }
 
 @media (max-width: 480px) {
@@ -211,9 +263,13 @@ footer {
         font-size: 30px;
     }
 
+    .hero {
+        padding: 65px 18px;
+    }
+
     nav a {
-        display: inline-block;
         margin: 5px;
+        font-size: 12px;
     }
 
     .gallery-grid img {
@@ -221,7 +277,12 @@ footer {
     }
 
     section {
-        padding: 40px 15px;
+        padding: 42px 15px;
+    }
+
+    .service {
+        padding: 14px;
+        font-size: 14px;
     }
 }
 </style>
@@ -235,9 +296,11 @@ footer {
 
     <nav>
         <a href="#about">Обо мне</a>
-        <a href="#services">Услуги</a>
+        <a href="#services">Прайс</a>
+        <a href="#promotions">Акции</a>
         <a href="#gallery">Работы</a>
         <a href="#booking">Запись</a>
+        <a href="#contacts">Контакты</a>
     </nav>
 </header>
 
@@ -252,41 +315,103 @@ footer {
 
 <section id="about">
     <h2>Обо мне <span class="decoration">♡</span></h2>
+
     <div class="about">
         <p>
             Привет! Я мастер по наращиванию ресниц.
             Люблю создавать красивые и аккуратные работы,
             уделяя внимание каждой детали.
         </p>
-        <p>
+
+        <p style="margin-top: 12px;">
             Буду рада видеть тебя на процедуре!
         </p>
     </div>
 </section>
 
 <section class="services" id="services">
-    <h2>Мои услуги</h2>
+    <h2>Прайс</h2>
 
     <div class="service-list">
+
         <div class="service">
-            <span>Классическое наращивание</span>
-            <span>Цена</span>
+            <span>Классика</span>
+            <span>1000 ₽</span>
         </div>
 
         <div class="service">
-            <span>Объём 2D</span>
-            <span>Цена</span>
+            <span>1,5D</span>
+            <span>1100 ₽</span>
         </div>
 
         <div class="service">
-            <span>Объём 3D</span>
-            <span>Цена</span>
+            <span>2D</span>
+            <span>1300 ₽</span>
         </div>
 
         <div class="service">
-            <span>Снятие ресниц</span>
-            <span>Цена</span>
+            <span>3D</span>
+            <span>1500 ₽</span>
         </div>
+
+        <div class="service">
+            <span>Мокрый эффект</span>
+            <span>1400 ₽</span>
+        </div>
+
+        <div class="service">
+            <span>Изгиб L, M</span>
+            <span>+100 ₽</span>
+        </div>
+
+        <div class="service">
+            <span>Снятие ресниц чужого мастера</span>
+            <span>200 ₽</span>
+        </div>
+
+        <div class="service">
+            <span>Снятие моих ресниц с последующим наращиванием</span>
+            <span>Бесплатно</span>
+        </div>
+
+    </div>
+</section>
+
+<section class="promotions" id="promotions">
+    <h2>Акции <span class="decoration">♡</span></h2>
+
+    <div class="service-list">
+
+        <div class="review">
+            <h3>Первое посещение</h3>
+            <p>Действует на любую услугу</p>
+            <strong>-10%</strong>
+        </div>
+
+        <div class="review">
+            <h3>Приведи друга</h3>
+            <p>Это может быть мама, подруга или сестра</p>
+            <strong>-10%</strong>
+        </div>
+
+        <div class="review">
+            <h3>Фото-отзыв</h3>
+            <p>
+                Выложи фото с отметкой мастера
+                в любой социальной сети
+            </p>
+            <strong>-5%</strong>
+        </div>
+
+        <div class="review">
+            <h3>Скидка на день рождения</h3>
+            <p>
+                Действует за 3 дня до
+                и 3 дня после дня рождения
+            </p>
+            <strong>-15%</strong>
+        </div>
+
     </div>
 </section>
 
@@ -299,13 +424,17 @@ footer {
         <img src="images/work3.jpg" alt="Красивые ресницы">
         <img src="images/work4.jpg" alt="Результат наращивания">
     </div>
+
+    <p class="gallery-note">
+        Больше красивых работ совсем скоро!
+    </p>
 </section>
 
-<section class="reviews">
+<section class="reviews" id="reviews">
     <h2>Отзывы</h2>
 
     <div class="review">
-        Здесь скоро появятся отзывы твоих клиенток 💗
+        <p>Здесь скоро появятся отзывы твоих клиенток ♡</p>
     </div>
 </section>
 
@@ -328,9 +457,10 @@ footer {
         <select name="Услуга" required>
             <option value="">Выбери услугу</option>
             <option>Классика</option>
+            <option>1,5D</option>
             <option>2D</option>
             <option>3D</option>
-            <option>Снятие</option>
+            <option>Мокрый эффект</option>
         </select>
 
         <input type="date" name="Дата" required>
@@ -349,23 +479,28 @@ footer {
         <button type="submit" class="button">
             Отправить заявку
         </button>
+
     </form>
 </section>
 
-<section class="contacts">
+<section class="contacts" id="contacts">
     <h2>Контакты</h2>
 
-    <p>Instagram:
-        <a href="https://instagram.com/YOUR_INSTAGRAM">
-        @YOUR_INSTAGRAM</a>
-    </p>
+    <p>Телефон:</p>
+    <a class="contact-button" href="tel:+79590224743">
+        +7 (959) 022-47-43
+    </a>
 
-    <p>Telegram:
-        <a href="https://t.me/YOUR_TELEGRAM">
-        @YOUR_TELEGRAM</a>
-    </p>
+    <p>Telegram:</p>
+    <a class="contact-button"
+       href="https://t.me/viko_lashess"
+       target="_blank">
+        Перейти в Telegram
+    </a>
 
-    <p class="decoration">Буду рада твоей записи ♡</p>
+    <p style="margin-top: 20px; color: #b77c83;">
+        Буду рада твоей записи ♡
+    </p>
 </section>
 
 <footer>
@@ -376,4 +511,5 @@ footer {
 
 </body>
 </html>
+
 
