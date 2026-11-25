@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viko_Lashes ♡</title>
+<title>Viko_Lashes — Мастер по ресницам</title>
 
 <style>
 * {
@@ -14,206 +14,214 @@
 }
 
 body {
-    background: #ffe5e8;
-    color: #633d45;
-    font-family: Georgia, serif;
+    font-family: Arial, sans-serif;
+    background: #faf7f2;
+    color: #493b36;
+    line-height: 1.6;
 }
 
 header {
+    background: #fffdf9;
+    padding: 20px;
     text-align: center;
-    padding: 30px 15px;
-    background: #f6bdc8;
-    border-bottom: 3px solid #d88d9e;
+    border-bottom: 1px solid #eadfd7;
 }
 
 .logo {
-    font-size: 38px;
-    color: #9c5267;
-    font-style: italic;
+    font-size: 30px;
+    color: #b77c83;
+    font-family: Georgia, serif;
 }
 
 header p {
-    margin-top: 10px;
+    color: #88766e;
+    font-size: 13px;
+    letter-spacing: 2px;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 15px;
-    background: #fbd3da;
+    margin-top: 15px;
 }
 
 nav a {
-    color: #854858;
+    color: #594943;
     text-decoration: none;
-    font-size: 15px;
+    margin: 0 9px;
+    font-size: 14px;
 }
 
 nav a:hover {
-    color: #d65b80;
-}
-
-section {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 30px 20px;
-    background: #fff3f1;
-    border: 2px solid #e8a9b5;
-    border-radius: 25px;
-    box-shadow: 0 5px 15px #d99aa544;
-}
-
-h2 {
-    text-align: center;
-    color: #b65c75;
-    font-size: 28px;
-    margin-bottom: 25px;
+    color: #c17f89;
 }
 
 .hero {
     text-align: center;
-    padding: 65px 20px;
-    background: linear-gradient(135deg, #f8c5d0, #ffe9e8);
+    padding: 75px 20px;
+    background: #eee5dc;
 }
 
 .hero h1 {
+    font-family: Georgia, serif;
     font-size: 38px;
-    color: #a64e69;
+    color: #59443e;
     margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 18px;
+    max-width: 500px;
+    margin: auto;
+    color: #77665d;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 28px;
+    background: #c58c91;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.button:hover {
+    background: #aa7077;
+}
+
+section {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    color: #815e58;
+    font-size: 30px;
     margin-bottom: 25px;
 }
 
-.btn {
-    display: inline-block;
-    background: #d77e98;
-    color: white;
-    padding: 13px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+.about {
+    max-width: 650px;
+    margin: auto;
+    color: #76665e;
 }
 
-.btn:hover {
-    background: #b95d7b;
+.services {
+    background: #f0e8df;
 }
 
-.price-item {
+.service-list {
+    max-width: 550px;
+    margin: auto;
+}
+
+.service {
+    background: #fffdf9;
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 12px;
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    padding: 13px 5px;
-    border-bottom: 1px dashed #dba0ad;
-    font-size: 18px;
+    text-align: left;
 }
 
-.promo {
-    text-align: center;
-    padding: 15px;
-    margin: 12px 0;
-    background: #f9d4db;
-    border-radius: 15px;
+.service span:last-child {
+    color: #b77c83;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
-.gallery {
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    max-width: 700px;
+    margin: auto;
 }
 
-.gallery img {
+.gallery-grid img {
     width: 100%;
-    height: 220px;
+    height: 230px;
     object-fit: cover;
-    border-radius: 15px;
-    background: #f4c5cf;
+    border-radius: 12px;
+    background: #eee5dc;
+}
+
+.reviews {
+    background: #f0e8df;
 }
 
 .review {
-    background: #f9dce1;
-    border-radius: 15px;
-    padding: 18px;
-    margin: 12px 0;
+    background: #fffdf9;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 12px auto;
+    color: #76665e;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
+.booking {
+    max-width: 500px;
+    margin: auto;
 }
 
-input, select, textarea {
+.booking input,
+.booking select,
+.booking textarea {
     width: 100%;
     padding: 13px;
-    border: 1px solid #d99aaa;
-    border-radius: 12px;
-    background: white;
-    color: #633d45;
-    font-size: 16px;
+    margin: 8px 0;
+    border: 1px solid #dfcec5;
+    border-radius: 9px;
+    background: #fffdf9;
+    font-size: 15px;
+    color: #493b36;
 }
 
-label {
-    font-size: 16px;
+.booking button {
+    width: 100%;
 }
 
-#slots {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.contacts {
+    background: #eee5dc;
 }
 
-.slot {
-    padding: 10px 17px;
-    background: #f5cbd4;
-    border: 1px solid #d98da0;
-    border-radius: 15px;
-    cursor: pointer;
-    color: #633d45;
-}
-
-.slot.selected {
-    background: #bd6680;
-    color: white;
+.contacts a {
+    color: #a76e76;
+    text-decoration: none;
 }
 
 footer {
+    background: #594943;
+    color: #fffaf5;
     text-align: center;
-    padding: 30px;
-    background: #f2bdca;
+    padding: 22px;
+    font-size: 13px;
 }
 
-footer a {
-    color: #854858;
-    margin: 8px;
+.decoration {
+    color: #bd858a;
 }
 
-@media(max-width: 500px) {
-    .logo {
-        font-size: 29px;
-    }
-
+@media (max-width: 480px) {
     .hero h1 {
         font-size: 30px;
     }
 
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .gallery-grid img {
+        height: 170px;
+    }
+
     section {
-        margin: 18px 10px;
-        padding: 23px 15px;
-    }
-
-    .price-item {
-        font-size: 16px;
-    }
-
-    .gallery img {
-        height: 160px;
+        padding: 40px 15px;
     }
 }
 </style>
@@ -222,249 +230,150 @@ footer a {
 <body>
 
 <header>
-    <div class="logo">♡ Viko_Lashes ♡</div>
-    <p>Красота в каждой детали</p>
+    <div class="logo">Viko_Lashes 🎀</div>
+    <p>BEAUTY • LASHES • CARE</p>
+
+    <nav>
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#gallery">Работы</a>
+        <a href="#booking">Запись</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#home">Главная</a>
-    <a href="#price">Прайс</a>
-    <a href="#promo">Акции</a>
-    <a href="#gallery">Работы</a>
-    <a href="#reviews">Отзывы</a>
-    <a href="#booking">Запись</a>
-    <a href="#contacts">Контакты</a>
-</nav>
+<div class="hero">
+    <h1>Твоя красота — в деталях</h1>
+    <p>
+        Подчеркнём естественную красоту твоих глаз.
+        Красивые ресницы и уютная атмосфера ждут тебя!
+    </p>
+    <a href="#booking" class="button">Записаться</a>
+</div>
 
-<section class="hero" id="home">
-    <h1>Добро пожаловать в Viko_Lashes ♡</h1>
-    <p>Подчеркни свою красоту вместе со мной!</p>
-    <a href="#booking" class="btn">Записаться ♡</a>
+<section id="about">
+    <h2>Обо мне <span class="decoration">♡</span></h2>
+    <div class="about">
+        <p>
+            Привет! Я мастер по наращиванию ресниц.
+            Люблю создавать красивые и аккуратные работы,
+            уделяя внимание каждой детали.
+        </p>
+        <p>
+            Буду рада видеть тебя на процедуре!
+        </p>
+    </div>
 </section>
 
-<section id="price">
-    <h2>♡ Мой прайс ♡</h2>
+<section class="services" id="services">
+    <h2>Мои услуги</h2>
 
-    <div class="price-item">
-        <span>Классика</span><b>1000 ₽</b>
+    <div class="service-list">
+        <div class="service">
+            <span>Классическое наращивание</span>
+            <span>Цена</span>
+        </div>
+
+        <div class="service">
+            <span>Объём 2D</span>
+            <span>Цена</span>
+        </div>
+
+        <div class="service">
+            <span>Объём 3D</span>
+            <span>Цена</span>
+        </div>
+
+        <div class="service">
+            <span>Снятие ресниц</span>
+            <span>Цена</span>
+        </div>
     </div>
-
-    <div class="price-item">
-        <span>1,5D</span><b>1100 ₽</b>
-    </div>
-
-    <div class="price-item">
-        <span>2D</span><b>1300 ₽</b>
-    </div>
-
-    <div class="price-item">
-        <span>3D</span><b>1500 ₽</b>
-    </div>
-
-    <div class="price-item">
-        <span>Мокрый эффект</span><b>1400 ₽</b>
-    </div>
-
-    <div class="price-item">
-        <span>Изгиб L, M</span><b>+100 ₽</b>
-    </div>
-
-    <div class="price-item">
-        <span>Снятие ресниц другого мастера</span>
-        <b>200 ₽</b>
-    </div>
-
-    <p style="text-align:center; margin-top:20px;">
-        ♡ Снятие моих ресниц при последующем
-        наращивании бесплатно ♡
-    </p>
-</section>
-
-<section id="promo">
-    <h2>♡ Акции ♡</h2>
-
-    <div class="promo">
-        <h3>Первое посещение −10%</h3>
-        <p>Действует на любую услугу</p>
-    </div>
-
-    <div class="promo">
-        <h3>Приведи друга −10%</h3>
-        <p>Мама, подруга или сестра</p>
-    </div>
-
-    <div class="promo">
-        <h3>Фотоотзыв −5%</h3>
-        <p>С отметкой мастера в социальной сети</p>
-    </div>
-
-    <div class="promo">
-        <h3>День рождения −15%</h3>
-        <p>3 дня до и 3 дня после</p>
-    </div>
-
-    <p style="text-align:center;">
-        Акции не суммируются ♡
-    </p>
 </section>
 
 <section id="gallery">
-    <h2>♡ Мои работы ♡</h2>
+    <h2>Мои работы <span class="decoration">♡</span></h2>
 
-    <div class="gallery">
-        <img src="images/work1.jpg" alt="Работа мастера 1">
-        <img src="images/work2.jpg" alt="Работа мастера 2">
-        <img src="images/work3.jpg" alt="Работа мастера 3">
-        <img src="images/work4.jpg" alt="Работа мастера 4">
+    <div class="gallery-grid">
+        <img src="images/work1.jpg" alt="Наращивание ресниц">
+        <img src="images/work2.jpg" alt="Работа мастера">
+        <img src="images/work3.jpg" alt="Красивые ресницы">
+        <img src="images/work4.jpg" alt="Результат наращивания">
     </div>
 </section>
 
-<section id="reviews">
-    <h2>♡ Отзывы клиентов ♡</h2>
+<section class="reviews">
+    <h2>Отзывы</h2>
 
     <div class="review">
-        <h3>♡ Имя клиента</h3>
-        <p>Здесь будет отзыв о работе мастера.</p>
-    </div>
-
-    <div class="review">
-        <h3>♡ Имя клиента</h3>
-        <p>Здесь будет ещё один отзыв.</p>
+        Здесь скоро появятся отзывы твоих клиенток 💗
     </div>
 </section>
 
 <section id="booking">
-    <h2>♡ Онлайн-запись ♡</h2>
+    <h2>Онлайн-запись</h2>
 
-    <p style="text-align:center; margin-bottom:20px;">
-        Выбери удобную дату и время!
-    </p>
-
-    <form action="https://formsubmit.co/YOUR_EMAIL@example.com"
-          method="POST">
+    <form class="booking"
+    action="https://formsubmit.co/YOUR_EMAIL@example.com"
+    method="POST">
 
         <input type="hidden" name="_subject"
-               value="Новая запись Viko_Lashes">
+        value="Новая запись Viko_Lashes">
 
-        <input type="hidden" name="_captcha" value="false">
-
-        <label>Твоё имя:</label>
         <input type="text" name="Имя"
-               placeholder="Как тебя зовут?" required>
+        placeholder="Твоё имя" required>
 
-        <label>Номер телефона:</label>
         <input type="tel" name="Телефон"
-               placeholder="+7..." required>
+        placeholder="Номер телефона" required>
 
-        <label>Выбери услугу:</label>
         <select name="Услуга" required>
             <option value="">Выбери услугу</option>
-            <option>Классика — 1000 ₽</option>
-            <option>1,5D — 1100 ₽</option>
-            <option>2D — 1300 ₽</option>
-            <option>3D — 1500 ₽</option>
-            <option>Мокрый эффект — 1400 ₽</option>
+            <option>Классика</option>
+            <option>2D</option>
+            <option>3D</option>
+            <option>Снятие</option>
         </select>
 
-        <label>Выбери дату:</label>
-        <input type="date" id="date"
-               name="Дата" required>
+        <input type="date" name="Дата" required>
 
-        <label>Свободное время:</label>
-        <div id="slots"></div>
+        <select name="Время" required>
+            <option value="">Выбери время</option>
+            <option>11:00</option>
+            <option>13:00</option>
+            <option>15:00</option>
+            <option>17:00</option>
+        </select>
 
-        <input type="hidden" id="time"
-               name="Время" required>
+        <textarea name="Комментарий"
+        placeholder="Комментарий (необязательно)"></textarea>
 
-        <p id="message">
-            Выбери дату, чтобы увидеть свободное время.
-        </p>
-
-        <button class="btn" type="submit">
-            Отправить заявку ♡
+        <button type="submit" class="button">
+            Отправить заявку
         </button>
     </form>
 </section>
 
-<section id="contacts">
-    <h2>♡ Контакты ♡</h2>
+<section class="contacts">
+    <h2>Контакты</h2>
 
-    <p style="text-align:center;">
-        Буду рада видеть тебя у себя!
+    <p>Instagram:
+        <a href="https://instagram.com/YOUR_INSTAGRAM">
+        @YOUR_INSTAGRAM</a>
     </p>
 
-    <div style="text-align:center; margin-top:20px;">
-        <p>Telegram: @YOUR_TELEGRAM</p>
-        <p>Instagram: @YOUR_INSTAGRAM</p>
-    </div>
+    <p>Telegram:
+        <a href="https://t.me/YOUR_TELEGRAM">
+        @YOUR_TELEGRAM</a>
+    </p>
+
+    <p class="decoration">Буду рада твоей записи ♡</p>
 </section>
 
 <footer>
-    <p>♡ Viko_Lashes ♡</p>
-    <p>Красота начинается с мелочей</p>
-    <p>2026</p>
+    © 2026 Viko_Lashes
+    <br>
+    Beauty begins with you 🎀
 </footer>
-
-<script>
-const dateInput = document.getElementById("date");
-const slots = document.getElementById("slots");
-const timeInput = document.getElementById("time");
-const message = document.getElementById("message");
-
-const freeTimes = [
-    "11:00",
-    "13:00",
-    "15:00",
-    "17:00"
-];
-
-const today = new Date();
-
-const localToday = new Date(
-    today.getTime() -
-    today.getTimezoneOffset() * 60000
-).toISOString().split("T")[0];
-
-dateInput.min = localToday;
-
-dateInput.addEventListener("change", function() {
-
-    slots.innerHTML = "";
-    timeInput.value = "";
-
-    if (!dateInput.value) {
-        message.textContent = "Выбери дату.";
-        return;
-    }
-
-    message.textContent = "Выбери свободное время:";
-
-    freeTimes.forEach(function(time) {
-
-        const button = document.createElement("button");
-
-        button.type = "button";
-        button.textContent = time;
-        button.className = "slot";
-
-        button.addEventListener("click", function() {
-
-            document.querySelectorAll(".slot")
-                .forEach(function(item) {
-                    item.classList.remove("selected");
-                });
-
-            button.classList.add("selected");
-            timeInput.value = time;
-
-        });
-
-        slots.appendChild(button);
-
-    });
-
-});
-</script>
 
 </body>
 </html>
+
