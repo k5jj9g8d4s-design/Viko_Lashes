@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Viko_Lashes — наращивание ресниц</title>
+
 <style>
 * {
     margin: 0;
@@ -84,6 +85,10 @@ section {
     border-radius: 30px;
 }
 
+.button:hover {
+    background: #b98b8d;
+}
+
 h2 {
     text-align: center;
     font-size: 28px;
@@ -112,12 +117,6 @@ h2 {
 .price-item span:last-child {
     font-weight: bold;
     white-space: nowrap;
-}
-
-.note {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
 }
 
 .promotions {
@@ -160,35 +159,6 @@ h2 {
     background: #eee3d7;
     border-radius: 15px;
     padding: 25px;
-}
-
-.booking {
-    max-width: 550px;
-    margin: auto;
-}
-
-.booking input,
-.booking select,
-.booking textarea {
-    width: 100%;
-    padding: 13px;
-    margin-bottom: 14px;
-    border: 1px solid #d9c6b8;
-    border-radius: 9px;
-    background: #fffdf9;
-    color: #59463d;
-    font-size: 15px;
-}
-
-.booking button {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 30px;
-    background: #c99fa0;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
 }
 
 .contacts {
@@ -249,7 +219,9 @@ footer {
 <div class="hero">
     <h1>Твоя красота — в деталях ♡</h1>
     <p>Подчеркни свою красоту вместе с Viko_Lashes</p>
-    <a class="button" href="#booking">Записаться</a>
+    <a class="button" href="https://vk.ru/wiqsisi" target="_blank">
+        Записаться ♡
+    </a>
 </div>
 
 <section id="about" class="about">
@@ -299,14 +271,17 @@ footer {
             <h3>Первое посещение</h3>
             <p>Скидка 10% на любую услугу.</p>
         </div>
+
         <div class="promo">
             <h3>Приведи друга</h3>
             <p>Скидка 10%. Это может быть мама, подруга или сестра.</p>
         </div>
+
         <div class="promo">
             <h3>Фото-отзыв</h3>
             <p>Скидка 5% за фото с отметкой мастера в любой социальной сети.</p>
         </div>
+
         <div class="promo">
             <h3>День рождения</h3>
             <p>Скидка 15% за 3 дня до и 3 дня после дня рождения.</p>
@@ -333,48 +308,30 @@ footer {
 </section>
 
 <section id="booking">
-    <h2>Онлайн-запись</h2>
-    <div class="booking">
-        <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
-            <input type="hidden" name="_subject" value="Новая запись Viko_Lashes">
-            <input type="hidden" name="_captcha" value="false">
-
-            <input type="text" name="Имя" placeholder="Твоё имя" required>
-
-            <input type="tel" name="Телефон" placeholder="Номер телефона" required>
-
-            <select name="Услуга" required>
-                <option value="">Выбери услугу</option>
-                <option>Классика</option>
-                <option>1,5D</option>
-                <option>2D</option>
-                <option>3D</option>
-                <option>Мокрый эффект</option>
-            </select>
-
-            <input type="date" name="Дата" required>
-
-            <select name="Время" required>
-                <option value="">Выбери время</option>
-                <option>11:00</option>
-                <option>13:00</option>
-                <option>15:00</option>
-                <option>17:00</option>
-            </select>
-
-            <textarea name="Комментарий" rows="4" placeholder="Комментарий (необязательно)"></textarea>
-
-            <button type="submit">Отправить заявку ♡</button>
-        </form>
+    <h2>Онлайн-запись ♡</h2>
+    <div style="text-align:center;">
+        <p>Хочешь записаться на наращивание ресниц?</p>
+        <p>Напиши мне ВКонтакте, и мы подберём удобное время!</p>
+        <a class="button" href="https://vk.ru/wiqsisi" target="_blank">
+            Записаться через ВК
+        </a>
     </div>
 </section>
 
 <section id="contacts" class="contacts">
     <h2>Контакты</h2>
     <p>Буду рада твоей записи 💗</p>
+
     <p>
         <a href="tel:+79590224743">📞 +7 (959) 022-47-43</a>
     </p>
+
+    <p>
+        <a href="https://vk.ru/wiqsisi" target="_blank">
+            Написать мастеру ВКонтакте
+        </a>
+    </p>
+
     <p>
         <a href="https://t.me/viko_lashess" target="_blank">
             Telegram-канал
@@ -388,6 +345,7 @@ footer {
 
 </body>
 </html>
+
 
 
 
