@@ -15,78 +15,83 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #fbf6f2;
-  color: #59443f;
+  background: #faf5f1;
+  color: #49352f;
   line-height: 1.6;
 }
 
 header {
-  background: #f1e2df;
-  padding: 20px;
+  background: #f1dfd8;
+  padding: 18px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
-  font-family: Georgia, serif;
-  font-size: 30px;
-  color: #9b6878;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 nav {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
-  padding: 15px 8px;
+  gap: 13px;
 }
 
 nav a {
-  color: #795663;
+  color: #654b43;
   text-decoration: none;
-  font-size: 14px;
-}
-
-.hero {
-  text-align: center;
-  padding: 65px 20px;
-  background: #f5e9e5;
-}
-
-.hero h1 {
-  font-family: Georgia, serif;
-  font-size: 34px;
-  color: #9b6878;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  margin-bottom: 25px;
-}
-
-.button {
-  display: inline-block;
-  background: #b98796;
-  color: white;
-  padding: 13px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 section {
   padding: 45px 20px;
-  max-width: 850px;
+  max-width: 900px;
   margin: auto;
 }
 
 h2 {
   text-align: center;
-  font-family: Georgia, serif;
-  font-size: 27px;
-  color: #9b6878;
   margin-bottom: 25px;
+  color: #855e58;
+}
+
+.hero {
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #ead5ce;
+  padding: 45px 20px;
+}
+
+.hero h1 {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 17px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 13px 27px;
+  background: #a97878;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .about {
@@ -96,16 +101,16 @@ h2 {
 .price-item {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
-  border-bottom: 1px solid #ead8d5;
-  padding: 13px 4px;
+  gap: 10px;
+  padding: 13px 5px;
+  border-bottom: 1px solid #e6d4cc;
 }
 
 .promo {
-  background: #f3e5e2;
-  padding: 18px;
+  background: #f2e4de;
+  padding: 17px;
   border-radius: 15px;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 }
 
 .gallery {
@@ -116,53 +121,70 @@ h2 {
 
 .gallery img {
   width: 100%;
-  height: 230px;
+  height: 210px;
   object-fit: cover;
-  border-radius: 15px;
-}
-
-.gallery img:last-child {
-  grid-column: span 2;
+  border-radius: 14px;
 }
 
 .booking {
-  background: #f3e5e2;
+  background: #f2e4de;
   border-radius: 20px;
   padding: 22px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-form label {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-form input,
-form select {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #dfc5c9;
-  border-radius: 12px;
-  background: #fffaf8;
-  color: #59443f;
-  font-size: 16px;
-  margin-top: 6px;
-}
-
-form button {
-  margin-top: 10px;
-  width: 100%;
-}
-
-#status {
-  text-align: center;
+.booking label {
+  display: block;
   margin-top: 15px;
-  color: #795663;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d8bdb3;
+  border-radius: 10px;
+  background: #fffaf7;
+  color: #49352f;
+  font-size: 15px;
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.slot {
+  padding: 13px 5px;
+  border-radius: 10px;
+  border: 1px solid #b88b83;
+  background: #fffaf7;
+  color: #654b43;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.slot.selected {
+  background: #a97878;
+  color: white;
+}
+
+.slot.busy {
+  background: #e4d6d1;
+  color: #99847c;
+  border-color: #d5c6c0;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.slot:disabled {
+  opacity: 1;
+}
+
+#slotMessage, #formMessage {
+  margin-top: 12px;
+  font-size: 14px;
 }
 
 .contacts {
@@ -170,29 +192,25 @@ form button {
 }
 
 .contacts a {
-  color: #9b6878;
-  display: inline-block;
-  margin: 8px;
+  color: #946765;
+  display: block;
+  margin: 12px;
 }
 
 footer {
   text-align: center;
-  padding: 25px;
-  background: #f1e2df;
-  color: #795663;
+  background: #f1dfd8;
+  padding: 20px;
+  font-size: 13px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 450px) {
   .hero h1 {
     font-size: 29px;
   }
 
   .gallery img {
-    height: 180px;
-  }
-
-  section {
-    padding: 35px 17px;
+    height: 170px;
   }
 }
 </style>
@@ -201,12 +219,12 @@ footer {
 <body>
 
 <header>
-  <div class="logo">Viko_Lashes ♡</div>
+  <div class="logo">Viko_Lashes</div>
   <nav>
     <a href="#about">Обо мне</a>
     <a href="#price">Прайс</a>
-    <a href="#promo">Акции</a>
-    <a href="#works">Работы</a>
+    <a href="#promos">Акции</a>
+    <a href="#gallery">Работы</a>
     <a href="#booking">Запись</a>
     <a href="#contacts">Контакты</a>
   </nav>
@@ -214,8 +232,8 @@ footer {
 
 <div class="hero">
   <h1>Твоя красота — в деталях</h1>
-  <p>Подчеркни свою красоту вместе с Viko_Lashes ♡</p>
-  <a class="button" href="#booking">Записаться ♡</a>
+  <p>Подчеркни свою красоту вместе с Viko_Lashes</p>
+  <a href="#booking" class="btn">Записаться</a>
 </div>
 
 <section id="about" class="about">
@@ -225,7 +243,6 @@ footer {
     Помогу подобрать эффект, который подчеркнёт
     твою естественную красоту.
   </p>
-  <p>Буду рада видеть тебя у себя! ♡</p>
 </section>
 
 <section id="price">
@@ -241,8 +258,8 @@ footer {
   <div class="price-item"><span>Снятие моих ресниц с последующим наращиванием</span><b>Бесплатно</b></div>
 </section>
 
-<section id="promo">
-  <h2>Акции ♡</h2>
+<section id="promos">
+  <h2>Акции</h2>
 
   <div class="promo">
     <b>Первое посещение — 10%</b>
@@ -265,7 +282,7 @@ footer {
   </div>
 </section>
 
-<section id="works">
+<section id="gallery">
   <h2>Мои работы</h2>
 
   <div class="gallery">
@@ -278,121 +295,215 @@ footer {
 </section>
 
 <section id="booking">
-  <h2>Онлайн-запись ♡</h2>
+  <h2>Онлайн-запись</h2>
 
   <div class="booking">
-    <p style="text-align:center; margin-bottom:20px;">
-      Заполни анкету, и я свяжусь с тобой для подтверждения записи.
-    </p>
+    <p>Выбери дату и посмотри свободное время.</p>
 
-    <form
-      id="bookingForm"
+    <label for="date">Дата записи</label>
+    <input type="date" id="date">
+
+    <div id="slotMessage">Сначала выбери дату.</div>
+    <div class="slots" id="slots"></div>
+
+    <form id="bookingForm"
       action="https://script.google.com/macros/s/AKfycbwQRkIftzZb61uif6tUYF40mGYbC6sgZsiF1lhV7CycR7xqp-vXSKH80CzThP9EfDT8fQ/exec"
       method="POST"
-      target="telegramFrame"
-    >
+      target="telegramFrame">
 
-      <label>
-        Как тебя зовут?
-        <input type="text" name="name" placeholder="Твоё имя" required>
-      </label>
+      <label for="name">Твоё имя</label>
+      <input id="name" name="name" required placeholder="Как тебя зовут?">
 
-      <label>
-        Номер телефона
-        <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
-      </label>
+      <label for="phone">Номер телефона</label>
+      <input id="phone" name="phone" type="tel" required placeholder="+7">
 
-      <label>
-        Какой эффект хочешь?
-        <select name="effect" required>
-          <option value="">Выбери эффект</option>
-          <option>Классика</option>
-          <option>1,5D</option>
-          <option>2D</option>
-          <option>3D</option>
-          <option>Мокрый эффект</option>
-        </select>
-      </label>
+      <label for="effect">Выбери эффект</label>
+      <select id="effect" name="effect" required>
+        <option value="">Выбрать эффект</option>
+        <option>Классика</option>
+        <option>1,5D</option>
+        <option>2D</option>
+        <option>3D</option>
+        <option>Мокрый эффект</option>
+      </select>
 
-      <label>
-        Желаемая дата
-        <input type="date" name="date" id="bookingDate" required>
-      </label>
+      <input type="hidden" id="chosenDate" name="date">
+      <input type="hidden" id="chosenTime" name="time">
 
-      <label>
-        Желаемое время
-        <input type="time" name="time" required>
-      </label>
-
-      <button class="button" type="submit">
-        Отправить заявку ♡
+      <button class="btn" type="submit" id="submitBtn" disabled>
+        Записаться
       </button>
 
+      <div id="formMessage"></div>
     </form>
 
-    <iframe
-      name="telegramFrame"
-      id="telegramFrame"
-      style="display:none;"
-    ></iframe>
-
-    <p id="status"></p>
+    <iframe name="telegramFrame" id="telegramFrame"
+      style="display:none"></iframe>
   </div>
 </section>
 
 <section id="contacts" class="contacts">
   <h2>Контакты</h2>
-  <p>Буду рада твоей записи! ♡</p>
 
-  <p>
-    <a href="https://vk.ru/viko_lashess" target="_blank">
-      ВКонтакте
-    </a>
-  </p>
+  <p>Буду рада видеть тебя!</p>
 
-  <p>
-    <a href="https://t.me/viko_lashess" target="_blank">
-      Telegram-канал
-    </a>
-  </p>
+  <a href="tel:+79590224743">+7 (959) 022-47-43</a>
+  <a href="https://t.me/viko_lashess" target="_blank">Telegram-канал</a>
+  <a href="https://vk.ru/viko_lashess" target="_blank">ВКонтакте</a>
 </section>
 
 <footer>
-  Viko_Lashes ♡<br>
-  Твоя красота — в деталях
+  © Viko_Lashes
 </footer>
 
 <script>
-var dateInput = document.getElementById("bookingDate");
-var today = new Date();
-var localDate = new Date(
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbwQRkIftzZb61uif6tUYF40mGYbC6sgZsiF1lhV7CycR7xqp-vXSKH80CzThP9EfDT8fQ/exec";
+
+const dateInput = document.getElementById("date");
+const slotsBlock = document.getElementById("slots");
+const slotMessage = document.getElementById("slotMessage");
+const submitBtn = document.getElementById("submitBtn");
+
+const today = new Date();
+const localToday = new Date(
   today.getTime() - today.getTimezoneOffset() * 60000
 ).toISOString().split("T")[0];
 
-dateInput.min = localDate;
+dateInput.min = localToday;
 
-var form = document.getElementById("bookingForm");
-var frame = document.getElementById("telegramFrame");
-var statusText = document.getElementById("status");
-var submitted = false;
+let selectedTime = "";
+let requestNumber = 0;
 
-form.addEventListener("submit", function() {
-  submitted = true;
-  statusText.textContent = "Отправляем заявку... ♡";
+function getTimes(date) {
+  const day = new Date(date + "T12:00:00").getDay();
+
+  if (day >= 1 && day <= 5) {
+    return ["14:00"];
+  }
+
+  return ["10:00", "14:20"];
+}
+
+function showSlots(date) {
+  const currentRequest = ++requestNumber;
+
+  slotsBlock.innerHTML = "";
+  selectedTime = "";
+  submitBtn.disabled = true;
+  document.getElementById("chosenDate").value = "";
+  document.getElementById("chosenTime").value = "";
+
+  if (!date) {
+    slotMessage.textContent = "Сначала выбери дату.";
+    return;
+  }
+
+  slotMessage.textContent = "Загружаем свободное время...";
+
+  const callbackName = "bookingCallback" + currentRequest;
+
+  window[callbackName] = function(bookings) {
+    delete window[callbackName];
+
+    if (currentRequest !== requestNumber) return;
+
+    slotsBlock.innerHTML = "";
+
+    const times = getTimes(date);
+
+    times.forEach(function(time) {
+      const busy = bookings.some(function(item) {
+        return item.date === date && item.time === time;
+      });
+
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = busy ? "slot busy" : "slot";
+      button.textContent = busy ? time + " — Занято" : time;
+
+      if (busy) {
+        button.disabled = true;
+      } else {
+        button.addEventListener("click", function() {
+          document.querySelectorAll(".slot").forEach(function(el) {
+            el.classList.remove("selected");
+          });
+
+          button.classList.add("selected");
+          selectedTime = time;
+
+          document.getElementById("chosenDate").value = date;
+          document.getElementById("chosenTime").value = time;
+
+          submitBtn.disabled = false;
+        });
+      }
+
+      slotsBlock.appendChild(button);
+    });
+
+    if (times.every(function(time) {
+      return bookings.some(function(item) {
+        return item.date === date && item.time === time;
+      });
+    })) {
+      slotMessage.textContent = "На эту дату свободного времени нет.";
+    } else {
+      slotMessage.textContent = "Выбери свободное время:";
+    }
+  };
+
+  const script = document.createElement("script");
+  script.src = SCRIPT_URL +
+    "?callback=" + callbackName +
+    "&t=" + Date.now();
+
+  script.onerror = function() {
+    if (currentRequest === requestNumber) {
+      slotMessage.textContent =
+        "Не удалось загрузить расписание. Попробуй обновить страницу.";
+    }
+    delete window[callbackName];
+    script.remove();
+  };
+
+  document.body.appendChild(script);
+}
+
+dateInput.addEventListener("change", function() {
+  showSlots(dateInput.value);
 });
 
-frame.addEventListener("load", function() {
-  if (submitted) {
-    statusText.textContent =
-      "Заявка отправлена! Ожидай подтверждения записи ♡";
-    form.reset();
-    submitted = false;
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+  if (!selectedTime) {
+    e.preventDefault();
+    document.getElementById("formMessage").textContent =
+      "Сначала выбери свободное время.";
+    return;
   }
+
+  submitBtn.disabled = true;
+  document.getElementById("formMessage").textContent =
+    "Отправляем заявку...";
+
+  const date = dateInput.value;
+  const time = selectedTime;
+
+  document.getElementById("telegramFrame").onload = function() {
+    document.getElementById("formMessage").textContent =
+      "Заявка отправлена! Проверь, пожалуйста, подтверждение у мастера.";
+
+    setTimeout(function() {
+      showSlots(date);
+    }, 2000);
+  };
 });
 </script>
 
 </body>
 </html>
+
 
 
 
