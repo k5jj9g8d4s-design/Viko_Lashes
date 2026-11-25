@@ -4,200 +4,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viko_Lashes — наращивание ресниц</title>
+<title>Viko_Lashes — Наращивание ресниц</title>
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f8f3ec;
-    color: #59463d;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background: #fbf6f2;
+  color: #59443f;
+  line-height: 1.6;
 }
 
 header {
-    background: #eee3d7;
-    padding: 20px;
-    text-align: center;
+  background: #f1e2df;
+  padding: 20px;
+  text-align: center;
 }
 
 .logo {
-    font-size: 30px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #795b50;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: #9b6878;
 }
 
 nav {
-    margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px 8px;
 }
 
 nav a {
-    display: inline-block;
-    margin: 5px 8px;
-    color: #795b50;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #bd8f91;
-}
-
-section {
-    padding: 55px 20px;
-    max-width: 1000px;
-    margin: auto;
+  color: #795663;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .hero {
-    text-align: center;
-    padding: 85px 20px;
-    background: #f1e7dc;
+  text-align: center;
+  padding: 65px 20px;
+  background: #f5e9e5;
 }
 
 .hero h1 {
-    font-size: 36px;
-    margin-bottom: 15px;
-    color: #795b50;
+  font-family: Georgia, serif;
+  font-size: 34px;
+  color: #9b6878;
+  margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 17px;
+  margin-bottom: 25px;
 }
 
 .button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 13px 28px;
-    background: #c99fa0;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
+  display: inline-block;
+  background: #b98796;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.button:hover {
-    background: #b98b8d;
+section {
+  padding: 45px 20px;
+  max-width: 850px;
+  margin: auto;
 }
 
 h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #795b50;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  color: #9b6878;
+  margin-bottom: 25px;
 }
 
 .about {
-    text-align: center;
-    max-width: 700px;
-}
-
-.price-list {
-    max-width: 600px;
-    margin: auto;
+  text-align: center;
 }
 
 .price-item {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 14px 5px;
-    border-bottom: 1px solid #dfcec0;
-}
-
-.price-item span:last-child {
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.promotions {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #ead8d5;
+  padding: 13px 4px;
 }
 
 .promo {
-    background: #eee3d7;
-    padding: 22px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.promo h3 {
-    margin-bottom: 10px;
-    color: #9c7374;
+  background: #f3e5e2;
+  padding: 18px;
+  border-radius: 15px;
+  margin-bottom: 12px;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
 .gallery img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 12px;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 .gallery img:last-child {
-    grid-column: 1 / -1;
+  grid-column: span 2;
 }
 
-.reviews {
-    text-align: center;
-    background: #eee3d7;
-    border-radius: 15px;
-    padding: 25px;
+.booking {
+  background: #f3e5e2;
+  border-radius: 20px;
+  padding: 22px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+form label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dfc5c9;
+  border-radius: 12px;
+  background: #fffaf8;
+  color: #59443f;
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+form button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+#status {
+  text-align: center;
+  margin-top: 15px;
+  color: #795663;
 }
 
 .contacts {
-    text-align: center;
-    background: #eee3d7;
-    border-radius: 15px;
+  text-align: center;
 }
 
 .contacts a {
-    color: #9c7374;
-    text-decoration: none;
-    display: inline-block;
-    margin: 8px;
+  color: #9b6878;
+  display: inline-block;
+  margin: 8px;
 }
 
 footer {
-    text-align: center;
-    padding: 25px;
-    background: #e8dbcf;
-    font-size: 13px;
+  text-align: center;
+  padding: 25px;
+  background: #f1e2df;
+  color: #795663;
 }
 
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 28px;
-    }
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 29px;
+  }
 
-    nav a {
-        font-size: 13px;
-        margin: 5px;
-    }
+  .gallery img {
+    height: 180px;
+  }
 
-    section {
-        padding: 40px 17px;
-    }
-
-    .gallery img {
-        height: 210px;
-    }
+  section {
+    padding: 35px 17px;
+  }
 }
 </style>
 </head>
@@ -205,146 +201,199 @@ footer {
 <body>
 
 <header>
-    <div class="logo">Viko_Lashes 🎀</div>
-    <nav>
-        <a href="#about">Обо мне</a>
-        <a href="#price">Прайс</a>
-        <a href="#promotions">Акции</a>
-        <a href="#gallery">Работы</a>
-        <a href="#booking">Запись</a>
-        <a href="#contacts">Контакты</a>
-    </nav>
+  <div class="logo">Viko_Lashes ♡</div>
+  <nav>
+    <a href="#about">Обо мне</a>
+    <a href="#price">Прайс</a>
+    <a href="#promo">Акции</a>
+    <a href="#works">Работы</a>
+    <a href="#booking">Запись</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
 </header>
 
 <div class="hero">
-    <h1>Твоя красота — в деталях ♡</h1>
-    <p>Подчеркни свою красоту вместе с Viko_Lashes</p>
-    <a class="button" href="https://vk.ru/viko_lashess" target="_blank">
-        Записаться ♡
-    </a>
+  <h1>Твоя красота — в деталях</h1>
+  <p>Подчеркни свою красоту вместе с Viko_Lashes ♡</p>
+  <a class="button" href="#booking">Записаться ♡</a>
 </div>
 
 <section id="about" class="about">
-    <h2>Обо мне ♡</h2>
-    <p>
-        Привет! Меня зовут Вика, я мастер по наращиванию ресниц.
-        Помогу подобрать подходящий эффект и создать красивый взгляд.
-        Буду рада видеть тебя на процедуре!
-    </p>
+  <h2>Обо мне</h2>
+  <p>
+    Привет! Я мастер по наращиванию ресниц.
+    Помогу подобрать эффект, который подчеркнёт
+    твою естественную красоту.
+  </p>
+  <p>Буду рада видеть тебя у себя! ♡</p>
 </section>
 
 <section id="price">
-    <h2>Прайс</h2>
-    <div class="price-list">
-        <div class="price-item">
-            <span>Классика</span><span>1000 ₽</span>
-        </div>
-        <div class="price-item">
-            <span>1,5D</span><span>1100 ₽</span>
-        </div>
-        <div class="price-item">
-            <span>2D</span><span>1300 ₽</span>
-        </div>
-        <div class="price-item">
-            <span>3D</span><span>1500 ₽</span>
-        </div>
-        <div class="price-item">
-            <span>Мокрый эффект</span><span>1400 ₽</span>
-        </div>
-        <div class="price-item">
-            <span>Изгиб L, M</span><span>+100 ₽</span>
-        </div>
-        <div class="price-item">
-            <span>Снятие ресниц чужого мастера</span><span>200 ₽</span>
-        </div>
-        <div class="price-item">
-            <span>Снятие моих ресниц с последующим наращиванием</span>
-            <span>Бесплатно</span>
-        </div>
-    </div>
+  <h2>Прайс</h2>
+
+  <div class="price-item"><span>Классика</span><b>1000 ₽</b></div>
+  <div class="price-item"><span>1,5D</span><b>1100 ₽</b></div>
+  <div class="price-item"><span>2D</span><b>1300 ₽</b></div>
+  <div class="price-item"><span>3D</span><b>1500 ₽</b></div>
+  <div class="price-item"><span>Мокрый эффект</span><b>1400 ₽</b></div>
+  <div class="price-item"><span>Изгиб L, M</span><b>+100 ₽</b></div>
+  <div class="price-item"><span>Снятие чужой работы</span><b>200 ₽</b></div>
+  <div class="price-item"><span>Снятие моих ресниц с последующим наращиванием</span><b>Бесплатно</b></div>
 </section>
 
-<section id="promotions">
-    <h2>Акции 🎀</h2>
-    <div class="promotions">
-        <div class="promo">
-            <h3>Первое посещение</h3>
-            <p>Скидка 10% на любую услугу.</p>
-        </div>
+<section id="promo">
+  <h2>Акции ♡</h2>
 
-        <div class="promo">
-            <h3>Приведи друга</h3>
-            <p>Скидка 10%. Это может быть мама, подруга или сестра.</p>
-        </div>
+  <div class="promo">
+    <b>Первое посещение — 10%</b>
+    <p>Скидка на любую услугу.</p>
+  </div>
 
-        <div class="promo">
-            <h3>Фото-отзыв</h3>
-            <p>Скидка 5% за фото с отметкой мастера в любой социальной сети.</p>
-        </div>
+  <div class="promo">
+    <b>Приведи друга — 10%</b>
+    <p>Это может быть мама, подруга или сестра.</p>
+  </div>
 
-        <div class="promo">
-            <h3>День рождения</h3>
-            <p>Скидка 15% за 3 дня до и 3 дня после дня рождения.</p>
-        </div>
-    </div>
+  <div class="promo">
+    <b>Фото-отзыв — 5%</b>
+    <p>Выложи фото с отметкой мастера в любой социальной сети.</p>
+  </div>
+
+  <div class="promo">
+    <b>День рождения — 15%</b>
+    <p>За 3 дня до и 3 дня после дня рождения.</p>
+  </div>
 </section>
 
-<section id="gallery">
-    <h2>Мои работы ♡</h2>
-    <div class="gallery">
-        <img src="images/IMG_7044.jpeg" alt="Работа мастера 1">
-        <img src="images/IMG_7045.jpeg" alt="Работа мастера 2">
-        <img src="images/IMG_7046.jpeg" alt="Работа мастера 3">
-        <img src="images/IMG_7047.jpeg" alt="Работа мастера 4">
-        <img src="images/IMG_7048.jpeg" alt="Работа мастера 5">
-    </div>
-</section>
+<section id="works">
+  <h2>Мои работы</h2>
 
-<section id="reviews">
-    <h2>Отзывы ♡</h2>
-    <div class="reviews">
-        <p>Здесь скоро появятся отзывы моих клиентов 💗</p>
-    </div>
+  <div class="gallery">
+    <img src="images/IMG_7044.jpeg" alt="Работа мастера">
+    <img src="images/IMG_7045.jpeg" alt="Работа мастера">
+    <img src="images/IMG_7046.jpeg" alt="Работа мастера">
+    <img src="images/IMG_7047.jpeg" alt="Работа мастера">
+    <img src="images/IMG_7048.jpeg" alt="Работа мастера">
+  </div>
 </section>
 
 <section id="booking">
-    <h2>Онлайн-запись ♡</h2>
-    <div style="text-align:center;">
-        <p>Хочешь записаться на наращивание ресниц?</p>
-        <p>Напиши мне ВКонтакте, и мы подберём удобное время!</p>
-        <a class="button" href="https://vk.ru/viko_lashess" target="_blank">
-            Записаться через ВК
-        </a>
-    </div>
+  <h2>Онлайн-запись ♡</h2>
+
+  <div class="booking">
+    <p style="text-align:center; margin-bottom:20px;">
+      Заполни анкету, и я свяжусь с тобой для подтверждения записи.
+    </p>
+
+    <form
+      id="bookingForm"
+      action="https://script.google.com/macros/s/AKfycbwQRkIftzZb61uif6tUYF40mGYbC6sgZsiF1lhV7CycR7xqp-vXSKH80CzThP9EfDT8fQ/exec"
+      method="POST"
+      target="telegramFrame"
+    >
+
+      <label>
+        Как тебя зовут?
+        <input type="text" name="name" placeholder="Твоё имя" required>
+      </label>
+
+      <label>
+        Номер телефона
+        <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+      </label>
+
+      <label>
+        Какой эффект хочешь?
+        <select name="effect" required>
+          <option value="">Выбери эффект</option>
+          <option>Классика</option>
+          <option>1,5D</option>
+          <option>2D</option>
+          <option>3D</option>
+          <option>Мокрый эффект</option>
+        </select>
+      </label>
+
+      <label>
+        Желаемая дата
+        <input type="date" name="date" id="bookingDate" required>
+      </label>
+
+      <label>
+        Желаемое время
+        <input type="time" name="time" required>
+      </label>
+
+      <button class="button" type="submit">
+        Отправить заявку ♡
+      </button>
+
+    </form>
+
+    <iframe
+      name="telegramFrame"
+      id="telegramFrame"
+      style="display:none;"
+    ></iframe>
+
+    <p id="status"></p>
+  </div>
 </section>
 
 <section id="contacts" class="contacts">
-    <h2>Контакты</h2>
-    <p>Буду рада твоей записи 💗</p>
+  <h2>Контакты</h2>
+  <p>Буду рада твоей записи! ♡</p>
 
-    <p>
-        <a href="tel:+79590224743">📞 +7 (959) 022-47-43</a>
-    </p>
+  <p>
+    <a href="https://vk.ru/viko_lashess" target="_blank">
+      ВКонтакте
+    </a>
+  </p>
 
-    <p>
-        <a href="https://vk.ru/viko_lashess" target="_blank">
-            Написать мастеру ВКонтакте
-        </a>
-    </p>
-
-    <p>
-        <a href="https://t.me/viko_lashess" target="_blank">
-            Telegram-канал
-        </a>
-    </p>
+  <p>
+    <a href="https://t.me/viko_lashess" target="_blank">
+      Telegram-канал
+    </a>
+  </p>
 </section>
 
 <footer>
-    © 2026 Viko_Lashes ♡
+  Viko_Lashes ♡<br>
+  Твоя красота — в деталях
 </footer>
+
+<script>
+var dateInput = document.getElementById("bookingDate");
+var today = new Date();
+var localDate = new Date(
+  today.getTime() - today.getTimezoneOffset() * 60000
+).toISOString().split("T")[0];
+
+dateInput.min = localDate;
+
+var form = document.getElementById("bookingForm");
+var frame = document.getElementById("telegramFrame");
+var statusText = document.getElementById("status");
+var submitted = false;
+
+form.addEventListener("submit", function() {
+  submitted = true;
+  statusText.textContent = "Отправляем заявку... ♡";
+});
+
+frame.addEventListener("load", function() {
+  if (submitted) {
+    statusText.textContent =
+      "Заявка отправлена! Ожидай подтверждения записи ♡";
+    form.reset();
+    submitted = false;
+  }
+});
+</script>
 
 </body>
 </html>
+
 
 
 
